@@ -21,7 +21,25 @@ http://www.templatemo.com/tm-481-elevate
     <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css" />
 <script async src="https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"></script>
-<div id="snipcart" data-config-modal-style="side" data-api-key="ZGMwMDgyMzAtYjgzZS00ODJjLWE0N2MtNDA5OGVmZTE2NDRjNjM3MjUzOTU3MTQ4NTM1Njg2" hidden></div>
+<div id="snipcart" data-config-modal-style="side" data-api-key="ZGMwMDgyMzAtYjgzZS00ODJjLWE0N2MtNDA5OGVmZTE2NDRjNjM3MjUzOTU3MTQ4NTM1Njg2" hidden>
+    <billing section="top">
+        <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__field">
+                <snipcart-label class="snipcart__font--tine" for="phone">Phone number</snipcart-label>
+                <snipcart-input name="phone"></snipcart-input>
+            </div>
+        </fieldset>
+    </billing>
+    <billing section="bottom">
+        <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__field">
+                <snipcart-label class="snipcart__font--tine" for="date">Insert date and time you will collect.</snipcart-label>
+                <snipcart-input name="date"></snipcart-input>
+            </div>
+        </fieldset>
+    </billing>
+
+</div>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -39,7 +57,9 @@ http://www.templatemo.com/tm-481-elevate
   (function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
 </script>
 <!-- End of Async Callbell Code -->
-
+<script>let date = $(function() {
+    $( "#datepicker" ).datepicker();
+});</script>
      </head>
       
 
