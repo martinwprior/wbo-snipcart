@@ -18,10 +18,33 @@ http://www.templatemo.com/tm-481-elevate
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">   <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
     <link rel="stylesheet" href="css/magnific-popup.css">                                     <!-- Magnific pop up style -->
-    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css" />
-<script async src="https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"></script>
-<div id="snipcart" data-config-modal-style="side" data-api-key="ZGMwMDgyMzAtYjgzZS00ODJjLWE0N2MtNDA5OGVmZTE2NDRjNjM3MjUzOTU3MTQ4NTM1Njg2" hidden></div>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+                                       <!-- Templatemo style -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.css" />
+    
+    <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js"></script>
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+<div id="snipcart" data-config-modal-style="side" data-api-key="ZGMwMDgyMzAtYjgzZS00ODJjLWE0N2MtNDA5OGVmZTE2NDRjNjM3MjUzOTU3MTQ4NTM1Njg2" hidden>
+    <billing section="top">
+        <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__field">
+                <snipcart-label class="snipcart__font--tine" for="phone">Phone number</snipcart-label>
+                <snipcart-input name="phone"></snipcart-input>
+            </div>
+        </fieldset>
+    </billing>
+    <billing section="bottom">
+        <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__field">
+                <snipcart-label class="snipcart__font--tine" for="date">Insert date and time you will collect.</snipcart-label>
+                <snipcart-input name="date"></snipcart-input>
+            </div>
+        </fieldset>
+    </billing>
+
+</div>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -30,20 +53,25 @@ http://www.templatemo.com/tm-481-elevate
           <![endif]-->
 
 <!-- Start of Async Callbell Code for the whatsApp and messenger popup Callbell.eo -->
-<script>
+
+<!-- <script>
   window.callbellSettings = {
     token: "EsJWxxdibHLPYACRCYWraV9g"
   };
 </script>
 <script>
   (function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
-</script>
+</script> -->
 <!-- End of Async Callbell Code -->
-
+<!--
+<script>let date = $(function() {
+    $( "#datepicker" ).datepicker();
+});</script>
+-->
      </head>
       
 
-      <body >
+      <body>
         <div class="container">
         
      
@@ -53,20 +81,25 @@ http://www.templatemo.com/tm-481-elevate
                 <img src="img/menu-top.jpg" alt="Menu top image" class="img-fluid tm-sidebar-image">
                 <nav class="tm-main-nav">
                     <ul>
-                        <li class="tm-nav-item"><a href="#home" class="tm-nav-item-link">Home</a></li>
+                        <li class="tm-nav-item"><a href="#" class="tm-nav-item-link">Home</a></li>
                         <li class="tm-nav-item"><a href="#about" class="tm-nav-item-link">About</a></li>
                         <li class="tm-nav-item"><a href="#products" class="tm-nav-item-link">Products</a></li>
+                        <button class="header__checkout snipcart-checkout">Checkout</button>
                         
-                        
-                  <!--     </button>   -->
+                        <img width="100px" src="img/noun_shopping basket_245684.svg" alt="basket"></img>
+                                                   
+
+                        <span class="snipcart-total-price">RM0.00</span>
+                        <span class="snipcart-items-count">0</span>
+                        </button>
                          
                     </ul>
                 </nav>
             </div>
             
-            <div class="tm-main-content">
+            <div id="home" name="home" class="tm-main-content">
                 
-                <section id="home" class="tm-content-box tm-banner margin-b-10">
+                <section class="tm-content-box tm-banner margin-b-10">
                     <div class="tm-banner-inner">
                         <h1 class="tm-banner-title">Whitebrickoven</h1>
                         <p class="tm-banner-text">Artisan Bakers</p>
@@ -89,7 +122,7 @@ http://www.templatemo.com/tm-481-elevate
                         
 
                     </div>
-                    <div id="about" class="tm-content-box">
+                    <div id="about" name="about" class="tm-content-box">
                         
                         <ul class="boxes gallery-container">
                             <li class="box box-bg">
@@ -131,7 +164,7 @@ http://www.templatemo.com/tm-481-elevate
                 </section>
 
                 <!-- slider -->
-                <section id="products">
+                <section >
                     <div id="tmCarousel" class="carousel slide tm-content-box" data-ride="carousel">
 
                         <ol class="carousel-indicators">
@@ -177,81 +210,156 @@ http://www.templatemo.com/tm-481-elevate
   
   </script>
 
-                <section class="tm-content-box">
+                <section id="products" class="tm-content-box">
                     <img src="img/contact.jpg" alt="Contact image" class="img-fluid">
                     <div class="tm-banner-inner">
                     <hr>
                     
                     <p><strong>Home Delivery or Collect Order Cut Off Times</strong></p>
 
-							<hr>
+                    <p><em>Check our FaceBook Page for today's Bakes and News</em></p>
+                    
+<p><strong>If you require Delivery please contact us first by Whatsapp or Phone.</stong></p>
+                                                <hr>
 
-
-							<p>Tuesday Delivery - Order before noon Sunday</p>
-							<p>Wednesday Delivery - Order before noon Monday</p>
+							
 							<p>Thursday Delivery - Order before noon Tuesday</p>
- 							<p>Saturday Delivery - Order before noon Thursday</p>
 							<p>Sunday Delivery - Order before noon Friday</p> 
-							</div>                  
+							</div>  
 <!-----------Shop here -->   
 
-  <div class="content"> 
+<div class="content"> 
    
-<div class="snipcart-wrapper">
+    <div class="snipcart-wrapper">
+        <div class="product_information">
+            <h2 class="product_title">Scones x 6 pcs</h2>
+            <img src="img/sconesx250.jpg" width="150" height="150" alt="Basque Burnt Cheesecake" >
+            <button class="snipcart-add-item"
+                  data-item-id="cheese-cake"
+                  data-item-price="19.50"
+                  data-item-url="/"
+                  data-item-description="Organic Flour, Butter, Organic Sugar, Raisins, Milk, Baking Powder."
+                  data-item-image="img/sconesx250.jpg"
+                  data-item-name="Raisin Scones"
+                  data-item-custom1-name="Notes">      
+                  Add to cart
+            </button>
+        </div>        
+        <div class="product_information">
+            <h2 class="product_title">Scones x 12 pcs</h2>
+            <img src="img/sconesx250.jpg" width="150" height="150" alt="Basque Burnt Cheesecake" >
+            <button class="snipcart-add-item"
+                  data-item-id="cheese-cake"
+                  data-item-price="38.00"
+                  data-item-url="/"
+                  data-item-description="Organic Flour, Butter, Organic Sugar, Raisins, Milk, Baking Powder."
+                  data-item-image="img/sconesx250.jpg"
+                  data-item-name="Raisin Scones"
+                  data-item-custom1-name="Notes">      
+                  Add to cart
+            </button>
+        </div>          
     <div class="product_information">
         <h2 class="product_title">CheeseCake</h2>
-        <img src="images/ales-krivec-QnNqGoCnBg0-unsplash.jpg" width="150" height="150" alt="" >
+        <img src="img/cheese-cakex250.jpg" width="150" height="150" alt="Basque Burnt Cheesecake" >
         <button class="snipcart-add-item"
               data-item-id="cheese-cake"
-              data-item-price="60.00"
+              data-item-price="15.00"
               data-item-url="/"
-              data-item-description="Cheesecake."
-              data-item-image="img/cheesecake.jpg"
-              data-item-name="Burnt Cheesecake">      
+              data-item-description="Basque Burnt Cheesecake, Cream Cheese, Organic Sugar, Eggs, Organic Flour, Sea Salt."
+              data-item-image="img/cheese-cakex250"
+              data-item-name="Burnt Cheesecake"
+              data-item-custom1-name="Notes">      
               Add to cart
         </button>
     </div>        
     <div class="product_information">
-        <h2 class="product_title">CheeseCake</h2>
-        <img src="images/ales-krivec-QnNqGoCnBg0-unsplash.jpg" width="150" height="150" alt="" >
+        <h2 class="product_title">Croissant</h2>
+        <img src="img/croissantx250.jpg" width="150" height="150" alt="Croissant" >
         <button class="snipcart-add-item"
-              data-item-id="cheese-cake"
-              data-item-price="60.00"
+              data-item-id="croissant"
+              data-item-price="27.00"
               data-item-url="/"
-              data-item-description="Cheesecake."
-              data-item-image="img/cheesecake.jpg"
-              data-item-name="Burnt Cheesecake">      
+              data-item-description="Croissant x 6 pcs, Organic Flour, Eggs, Butter, Organic Sugar, Yeast, Water, Sea Salt."
+              data-item-image="img/croissantx250.jpg"
+              data-item-name="Croissant"
+              data-item-custom1-name="Notes">      
               Add to cart
         </button>
     </div>       
     <div class="product_information">
-        <h2 class="product_title">CheeseCake</h2>
-        <img src="images/ales-krivec-QnNqGoCnBg0-unsplash.jpg" width="150" height="150" alt="" >
+        <h2 class="product_title">Malted Bagels</h2>
+        </h2>
+        <img src="img/bagelsx250.jpg" width="150" height="150" alt="Malted Bagels" >
         <button class="snipcart-add-item"
-              data-item-id="cheese-cake"
-              data-item-price="60.00"
+              data-item-id="bagels"
+              data-item-price="24.00"
               data-item-url="/"
-              data-item-description="Cheesecake."
-              data-item-image="img/cheesecake.jpg"
-              data-item-name="Burnt Cheesecake">      
+              data-item-description="Bagels x 6 pcs, Organic Bread Flour, Water, Malt, Yeast, Organic Sugar, Sea Salt, Mixed Seeds and Grains for topping.."
+              data-item-image="img/bagelsx250.jpg"
+              data-item-name="Bagels"
+              data-item-custom1-name="Notes">      
               Add to cart
         </button>
     </div>       
     <div class="product_information">
-        <h2 class="product_title">CheeseCake</h2>
-        <img src="images/ales-krivec-QnNqGoCnBg0-unsplash.jpg" width="150" height="150" alt="" >
+        <h2 class="product_title">Malted Nuttimalt Bread</h2>
+        <img src="img/granaryx250.jpg" width="150" height="150" alt="Malted Nuttimalt Loaf" >
         <button class="snipcart-add-item"
-              data-item-id="cheese-cake"
-              data-item-price="60.00"
+              data-item-id="malted-nuttimalt"
+              data-item-price="15.00"
               data-item-url="/"
-              data-item-description="Cheesecake."
-              data-item-image="img/cheesecake.jpg"
-              data-item-name="Burnt Cheesecake">      
+              data-item-description="Malted Nuttimalt Loaf, Organic Bread Flour, Sourdough, Nuttimalt Grains, Water, Malt and Sea Salt."
+              data-item-image="img/granaryx250.jpg"
+              data-item-name="Malted Nuttimalt Sourdough Loaf"
+              data-item-custom1-name="Notes">      
               Add to cart
         </button>
     </div>       
-        
-</div>
+      <div class="product_information">
+        <h2 class="product_title">Sourdough Boule</h2>
+        <img src="img/boulex250.jpg" width="150" height="150" alt="Sourdough Boule" >
+        <button class="snipcart-add-item"
+              data-item-id="boule"
+              data-item-price="15.00"
+              data-item-url="/"
+              data-item-description="Sourdough Boule, Organic Bread Flour, Fresh Milled Wheat, Water, Sourdough, Sea Salt."
+              data-item-image="img/boulex250.jpg"
+              data-item-name="Sourdough Boule"
+              data-item-custom1-name="Notes">      
+              Add to cart
+        </button>
+    </div>    
+    <div class="product_information">
+        <h2 class="product_title">Malted Chocolate cake</h2>
+        <img src="img/chocolate-cake.jpg" width="150" height="150" alt="Malted Chocolate Cake" >
+        <button class="snipcart-add-item"
+              data-item-id="malted-chocolate-cake"
+              data-item-price="15.00"
+              data-item-url="/"
+              data-item-description="Malted Chocolate Cake, Butter, Eggs, Organic Sugar, Malt, Organic Flour, Baking Powder, Sea Salt."
+              data-item-image="img/chocolate-cake.jpg"
+              data-item-name="Malted Chocolate Cake"
+              data-item-custom1-name="Notes">      
+              Add to cart
+        </button>
+    </div>    
+    <div class="product_information">
+        <h2 class="product_title">Walnut Brownies</h2>
+        <img src="img/browniex250.jpg" width="150" height="150" alt="Walnut Brownies" >
+        <button class="snipcart-add-item"
+              data-item-id="walnut-brownies"
+              data-item-price="30.00"
+              data-item-url="https://www.whitebrickoven"
+              data-item-description="Walnut Brownies, Butter, Chocolate, Eggs, Organic Sugar, Organic Flour."
+              data-item-image="img/browniesx250.jpg"
+              data-item-name="Walnut Brownies"
+              data-item-custom1-name="Notes">
+              Add to cart
+        </button>
+    </div>    
+ 
+    </div>
 </div>
    
     
@@ -293,7 +401,7 @@ http://www.templatemo.com/tm-481-elevate
                 </section>  
 
                 <footer class="tm-footer">
-                    <p class="text-xs-center">Copyright &copy; 2020 Whitebrickoven Foods</p>
+                    <p class="text-xs-center">Copyright &copy; 2021 Whitebrickoven Foods</p>
                 </footer>
 
             </div>
