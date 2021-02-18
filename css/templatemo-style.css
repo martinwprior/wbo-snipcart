@@ -415,7 +415,7 @@ font-weight: 900;}
 
 button {
   border: none;
-  padding: 12px;button
+  padding: 12px;
   color: white;
   
   background-color: rgb(49,176,213);
@@ -465,6 +465,7 @@ ul.rig li img {
 	max-width: 100%;
 	height: auto;
 	margin: 0 0 10px;
+
 }
 ul.rig li h3 {
 	margin: 0 0 5px;
@@ -517,5 +518,12 @@ ul.rig.columns-4 li {
  .product_title {
 	font-weight: 900;
 	
+ }
+ .product_information img {
+	 margin-bottom: 5px;
+ }
+ .tm-sidebar img:first-child {
+	box-shadow: 10px 10px 5px grey;
+	margin-bottom: 10px;
  }
 	
